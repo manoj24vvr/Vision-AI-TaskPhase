@@ -12,8 +12,8 @@ This course clearly explains and includes the following:
 -	Strings
 -	Classes and objects
 > The above concepts can be well understood but might be confusing while using lists and dictionaries with classes and objects. And the final Project in the course can be competed with just a simple code using only conditionals and loops.
-Here is the link to my certificate for completing the “Crash Course on Python”:
-https://www.coursera.org/account/accomplishments/certificate/93BG9ZUHYXF4
+> Here is the link to my certificate for completing the “Crash Course on Python”:
+> https://www.coursera.org/account/accomplishments/certificate/93BG9ZUHYXF4
 # 2.	Game-1: Snake Game.
 I’ve used ‘Pygame’, ‘Random’ and ‘Math’ libraries of python to write and develop the code for the snake game. I have referred to the Pygame documentation(online), two You Tube videos and had also finished a Coursera Project on writing the python code for a simple snake game.
 > Here are the links for the YouTube videos I referred:
