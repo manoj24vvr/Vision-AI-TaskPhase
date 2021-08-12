@@ -1,3 +1,4 @@
+   
 # Import required libraries.
 import numpy as np
 import pygame
@@ -5,6 +6,7 @@ import math
 
 ROWS = 3
 COLUMNS = 3
+
 
 # write the RGB colour code for required colours before hand, so it won't be necessary to use the colour code every time it is required.
 WHITE = (255,255,255)
@@ -14,6 +16,16 @@ BLUE = (0,255,0)
 WIDTH = 600
 HEIGHT = 600
 SIZE = (WIDTH,HEIGHT)
+
+
+ # Initializing all the modules and functions of the Pygame library.
+pygame.init()   
+
+# Initialize a board(Display screen) for the game.
+board = np.zeros((ROWS,COLUMNS))
+window = pygame.display.set_mode(SIZE)
+pygame.display.set_caption("tic tac toe")
+window.fill(WHITE)
 
  # Importing the circle and cross images to include in the game.
 CIRCLE = pygame.image.load("circle.png")   
@@ -61,28 +73,19 @@ def is_winning_move(player):
             return True
     for c in range(COLUMNS):
         if board[0][c] == player and board[1][c] ==player and board[2][c] == player:
-            pygame.draw.line(window,winning_colour,(10,(r*200)+100),(WIDTH-10, (r*200)+100),10)
+            pygame.draw.line(window,winning_colour,((c*200)+100,10),(WIDTH-10, (c*200)+100),10)
             return True
     if board[0][0] == player and board[1][1] ==player and board[2][2] == player:
-            pygame.draw.line(window,winning_colour,(10,(r*200)+100),(WIDTH-10, (r*200)+100),10)
+            pygame.draw.line(window,winning_colour,(10,10),(WIDTH-10, HEIGHT-10))
             return True
     if board[2][0] == player and board[1][1] ==player and board[0][2] == player:
-            pygame.draw.line(window,winning_colour,(10,(r*200)+100),(WIDTH-10, (r*200)+100),10)
+            pygame.draw.line(window,winning_colour,(10,HEIGHT-10),(WIDTH-10,10))
             return True
 
-# Initialize a board(Display screen) for the game.
 
-board = np.zeros((ROWS,COLUMNS))
 
 game_over = False
-
 Turn = 0
-
- # Initializing all the modules and functions of the Pygame library.
-pygame.init()   
-window = pygame.display.set_mode(SIZE)
-pygame.display.set_caption("tic tac toe")
-window.fill(WHITE)
 draw_lines()
 pygame.display.update()
 pygame.time.wait(2000)
@@ -129,4 +132,4 @@ while not game_over:
         draw_lines()
         draw_board()
         game_over = False
-        pygame.display.update()
+        pygame.display.update() 
