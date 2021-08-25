@@ -1,0 +1,10 @@
+# Language Popularity
+slices = [59219, 55466, 47544, 36443, 35917, 31991, 27097, 23030, 20524, 18523, 18017, 7920, 7331, 7201, 5833]
+labels = ['JavaScript', 'HTML/CSS', 'SQL', 'Python', 'Java', 'Bash/Shell/PowerShell', 'C#', 'PHP', 'C++', 'TypeScript', 'C', 'Other(s):', 'Ruby', 'Go', 'Assembly']
+
+
+## Stack_plots
+
+player1 = [8, 6, 5, 5, 4, 2, 1, 1, 0]
+player2 = [0, 1, 2, 2, 2, 4, 4, 4, 4]
+player3 = [0, 1, 1, 1, 2, 2, 3, 3, 4]
